@@ -1,0 +1,8 @@
+i{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: green;
+    pointer-events: none;
+    animation: animate 2s linear forwards;
+}
