@@ -6,15 +6,15 @@ import Footer from '../Shared/Footer/Footer';
 const Mainlayout = () => {
     return (
         <div className='font-Sora'>
-            <section>
+            {/* <section>
                 <Navbar></Navbar>
-            </section>
+            </section> */}
             <section>
                 <Outlet></Outlet>
             </section>
-            <section>
+            {/* <section>
                 <Footer></Footer>
-            </section>
+            </section> */}
         </div>
     );
 };
