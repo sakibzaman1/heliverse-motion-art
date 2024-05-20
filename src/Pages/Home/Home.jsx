@@ -12,11 +12,13 @@ import ReactFluidAnimation from "@usertive/react-fluid-animation";
 import applyImg1 from "../../assets/motionarteffect-img11.png";
 import applyImg2 from "../../assets/motionarteffect-img10.png";
 import browserImg from "../../assets/motionarteffect-img8.png";
-import featureImg1 from '../../assets/motionarteffect-img9.png'
-import featureImg2 from '../../assets/motionarteffect-img6.png'
-import featureImg3 from '../../assets/motionarteffect-img7.png'
+import featureImg1 from "../../assets/motionarteffect-img9.png";
+import featureImg2 from "../../assets/motionarteffect-img6.png";
+import featureImg3 from "../../assets/motionarteffect-img7.png";
 import "./home.css";
 import navImg from "../../assets/evantoMarketLogo.svg";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const animationConfig = {
@@ -32,7 +34,7 @@ const Home = () => {
     <div>
       <div className="min-h-screen home-content relative">
         <ReactFluidAnimation {...animationConfig} className="fluid-animation" />
-        <div className="navbar bg-[#262626] h-10  fixed z-30">
+        <div className="navbar bg-[#262626] h-10 l fixed z-30">
           <div className="flex-1 px-2">
             <a className=" text-xl">
               <img className="w-40 h-6" src={navImg} alt="" />
@@ -55,7 +57,7 @@ const Home = () => {
               <img src={motionArtLogo} alt="" />
             </div>
             <div>
-              <button className="bg-white hidden lg:flex hover:bg-transparent hover:text-white border-white border-2 p-4 rounded-lg w-48">
+              <button className="bg-white hidden justify-center lg:flex hover:bg-transparent hover:text-white border-white border-2 p-4 rounded-lg w-48 transition duration-300 ease-in-out">
                 Purchase now
               </button>
             </div>
@@ -141,9 +143,14 @@ const Home = () => {
                   empowers you to effortlessly infuse your website with visually
                   stunning motion art elements.
                 </p>
-                <button className="w-80 bg-gradient-to-l from-[#F87516] via-violet-800 to-[#5E11FF] text-white h-16 rounded-2xl text-xl">
-                  Purchase From Evanto
-                </button>
+                <Link to="https://codecanyon.net/item/motion-art-for-elementor-wordpress-plugin/48826891">
+                  <button className="w-80 bg-gradient-to-l from-[#F87516] via-violet-800 to-[#5E11FF] text-white h-16 rounded-2xl text-xl">
+                    <div className="flex justify-center gap-4  items-center">
+                      <h1>Purchase From Evanto</h1>{" "}
+                      <IoIosArrowRoundForward size={30} />
+                    </div>
+                  </button>
+                </Link>
               </div>
               <div>
                 <img src={purchaseImg} alt="" />
@@ -193,7 +200,9 @@ const Home = () => {
 
           <section>
             <div className="text-center w-[60%] mx-auto">
-              <h1  className="text-4xl font-bold text-white mb-6" >An All-Round Plugin With Powerful Features</h1>
+              <h1 className="text-4xl font-bold text-white mb-6">
+                An All-Round Plugin With Powerful Features
+              </h1>
               <p className=" text-slate-400">
                 Whether you're a seasoned web designer or just starting out,
                 Motion Art for Elementor seamlessly integrates with the
@@ -203,54 +212,62 @@ const Home = () => {
             </div>
             <div className="lg:flex items-center justify-center gap-6">
               <div className="lg:w-full p-10 h-96 bg-gradient-to-b from-[#0E0720] to-[#241D34] rounded-2xl my-32 border-2 border-b-0 border-[#332C42]">
-              <img className="w-[60%] h-40 left-0 flex justify-start mb-6" src={featureImg1} alt="" />
-              <h1 className="text-2xl font-bold text-white mb-6">
-              Light Weight
-              </h1>
-              <p className="mb-8 text-slate-400 ">
-              Motion Art for Elementor is designed to be lightweight.
-              </p>
-              
+                <img
+                  className="w-[60%] h-40 left-0 flex justify-start mb-6"
+                  src={featureImg1}
+                  alt=""
+                />
+                <h1 className="text-2xl font-bold text-white mb-6">
+                  Light Weight
+                </h1>
+                <p className="mb-8 text-slate-400 ">
+                  Motion Art for Elementor is designed to be lightweight.
+                </p>
               </div>
               <div className=" p-10 h-96 w-full  bg-gradient-to-b from-[#0E0720] to-[#241D34] rounded-2xl my-32 border-2 border-b-0 border-[#332C42]">
-              <img className="w-[60%] h-40  flex justify-start mb-6" src={featureImg2} alt="" />
-              <h1 className="text-2xl font-bold text-white mb-6">
-              100% Responsive
-              </h1>
-              <p className="mb-8 text-slate-400">
-              Create a consistent visual experience across all devices.
-              </p>
-              
+                <img
+                  className="w-[60%] h-40  flex justify-start mb-6"
+                  src={featureImg2}
+                  alt=""
+                />
+                <h1 className="text-2xl font-bold text-white mb-6">
+                  100% Responsive
+                </h1>
+                <p className="mb-8 text-slate-400">
+                  Create a consistent visual experience across all devices.
+                </p>
               </div>
               <div className="w-full p-10 h-96 bg-gradient-to-b from-[#0E0720] to-[#241D34] rounded-2xl my-32 border-2 border-b-0 border-[#332C42]">
-              <img className="w-[60%] h-40 flex justify-start mb-6" src={featureImg3} alt="" />
-              <h1 className="text-2xl font-bold text-white mb-6">
-              User Friendly Interface
-              </h1>
-              <p className="mb-8 text-slate-400">
-              Ensure a smooth experience for both applicants and administrators.
-              </p>
-              
+                <img
+                  className="w-[60%] h-40 flex justify-start mb-6"
+                  src={featureImg3}
+                  alt=""
+                />
+                <h1 className="text-2xl font-bold text-white mb-6">
+                  User Friendly Interface
+                </h1>
+                <p className="mb-8 text-slate-400">
+                  Ensure a smooth experience for both applicants and
+                  administrators.
+                </p>
               </div>
             </div>
           </section>
-          <section>
-          <div className="">
-        <footer className="footer  items-center p-4 bg-neutral text-neutral-content px-6 text-xs pt-8 bg-gradient-to-r from-orange-500 via-fuchsia-500 to-purple-700">
-          <aside className="items-center grid-flow-col">
-            <p>© 2023 Copywrite. All rights reserved by QodeMatrix</p>
-          </aside>
-          <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end ">
-            <a href="">Documentation</a>
-            <a href="">Support</a>
-          </nav>
-        </footer>
-      </div>
+          <section className="w-full bg-gradient-to-r from-orange-500 via-fuchsia-500 to-purple-700">
+            <div className="">
+              <footer className="footer  items-center p-4 bg-neutral text-neutral-content px-6 text-xs pt-8 bg-gradient-to-r from-orange-500 via-fuchsia-500 to-purple-700">
+                <aside className="items-center grid-flow-col">
+                  <p>© 2023 Copywrite. All rights reserved by QodeMatrix</p>
+                </aside>
+                <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end ">
+                  <a href="">Documentation</a>
+                  <a href="">Support</a>
+                </nav>
+              </footer>
+            </div>
           </section>
         </div>
       </div>
-
-    
     </div>
   );
 };
