@@ -32,8 +32,16 @@ const Home = () => {
   };
   return (
     <div>
+       <ReactFluidAnimation {...animationConfig} className="fluid-animation"   style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: -1 // Ensure it’s behind other content
+    }} />
       <div className="min-h-screen home-content relative">
-        <ReactFluidAnimation {...animationConfig} className="fluid-animation" />
+       
         <div className="navbar bg-[#262626] h-10 l fixed z-30">
           <div className="flex-1 px-2">
             <a className=" text-xl">
@@ -53,6 +61,10 @@ const Home = () => {
           />
           {/* section 1 */}
           <section className="flex justify-between items-center py-6">
+          <ReactFluidAnimation
+            {...animationConfig}
+            className="fluid-animation"
+          />
             <div>
               <img src={motionArtLogo} alt="" />
             </div>
@@ -64,6 +76,7 @@ const Home = () => {
           </section>
           {/* section 2 */}
           <section className="mt-12 lg:flex justify-center text-center lg:text-start">
+          <ReactFluidAnimation {...animationConfig} className="fluid-animation" />
             <div className="lg:w-[20%] text-lg text-white">
               <h1 className="mb-4">
                 <span className="mb-2 bg-gradient-to-r from-[#F87516] via-violet-800 to-[#5E11FF] bg-clip-text text-transparent">
